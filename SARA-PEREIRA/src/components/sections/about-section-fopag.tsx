@@ -79,7 +79,7 @@ export default function AboutSection() {
           </div>
 
           {/* Coluna da direita (imagem) */}
-          <div className="w-full lg:w-1/2 flex items-start justify-center -mt-48">
+          <div className="w-full lg:w-1/2 flex items-start justify-center mt-6 lg:-mt-48">
             <FadeIn direction="right" className="relative w-full">
               <div className="relative w-full rounded-3xl overflow-hidden">
                 <img 

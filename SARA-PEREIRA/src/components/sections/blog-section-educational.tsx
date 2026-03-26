@@ -1169,7 +1169,7 @@ A tecnologia está revolucionando a forma como gerenciamos pessoas e processos.
                         src={featuredPost.image}
                         alt={featuredPost.title}
                         fill
-                        className="object-contain"
+                        className="object-cover"
                       />
                       <div className="absolute top-6 left-6">
                         <span className="bg-primary text-white px-4 py-2 rounded-full text-sm font-semibold">
@@ -1287,7 +1287,7 @@ A tecnologia está revolucionando a forma como gerenciamos pessoas e processos.
 
             {/* CTA */}
             <FadeIn direction="up" className="text-center">
-              <Button variant="outline" size="lg" className="border-slate-300 text-slate-700 hover:bg-slate-50 hover:border-slate-400 px-8 py-4">
+              <Button variant="outline" size="lg" className="border-slate-300 text-slate-700 hover:bg-primary hover:text-white hover:border-primary px-8 py-4 transition-colors">
                 Ver Todos os Artigos
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Button>

@@ -1,5 +1,8 @@
+'use client';
+
 import Image from 'next/image';
 import { ArrowRight, CheckCircle, TrendingUp } from 'lucide-react';
+import { motion } from 'framer-motion';
 import { FadeIn } from '@/components/ui/fade-in';
 import { Button } from '@/components/ui/button';
 import { WHATSAPP_LINK } from '@/lib/constants';
@@ -16,7 +19,7 @@ export default function HeroSection() {
   const heroImage = PlaceHolderImages.find(p => p.id === 'hero-sara');
 
   return (
-    <section className="relative w-full overflow-hidden bg-gradient-to-br from-slate-50 to-white py-12 lg:py-20">
+    <section className="relative w-full overflow-hidden bg-gradient-to-br from-slate-50 to-white pt-28 pb-12 lg:pt-36 lg:pb-20">
 
   {/* ========================================================= */}
   {/* COLOQUE ESTAS DUAS IMAGENS AQUI, LOGO NO COMEÇO DA SECTION */}
@@ -24,7 +27,7 @@ export default function HeroSection() {
     src="https://files.catbox.moe/7aurrh.png" 
     alt="" 
     aria-hidden="true"
-    className="absolute -bottom-32 -right-20 w-[500px] lg:w-[800px] opacity-30 rotate-45 pointer-events-none"
+    className="hidden lg:block absolute -bottom-32 -right-20 w-[500px] lg:w-[800px] opacity-30 rotate-45 pointer-events-none"
   />
   {/* ========================================================= */}
 
@@ -51,7 +54,7 @@ export default function HeroSection() {
 
           {/* Botões */}
           <div className="flex flex-col sm:flex-row gap-6 pt-6">
-            <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 text-base px-8 py-3 shadow-lg shadow-primary/20 rounded-full">
+            <Button asChild size="lg" className="text-base px-8 py-3 shadow-lg shadow-primary/20 rounded-full">
               <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
                 Fale com a Sara
                 <ArrowRight className="w-4 h-4 ml-2" />
@@ -68,7 +71,11 @@ export default function HeroSection() {
     {/* Metade Direita: Imagem da Sara (Exatamente 50% do espaço) */}
     <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
       <FadeIn direction="right" className="relative w-full h-[500px] lg:h-[600px]">
-        <div className="relative w-full h-full rounded-3xl overflow-hidden">
+        <motion.div 
+          animate={{ y: [0, -15, 0] }}
+          transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
+          className="relative w-full h-full rounded-3xl overflow-hidden"
+        >
           <img 
             src="https://files.catbox.moe/jf6gav.png"
             alt="Gêmeas DP - Profissionais de Departamento Pessoal"
@@ -76,7 +83,7 @@ export default function HeroSection() {
           />
           {/* Gradiente overlay para efeito embutido - mais forte */}
           <div className="absolute bottom-0 left-0 right-0 h-1/2 bg-gradient-to-t from-slate-50 via-slate-50/80 via-slate-50/40 to-transparent" />
-        </div>
+        </motion.div>
       </FadeIn>
     </div>
 

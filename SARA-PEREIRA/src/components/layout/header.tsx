@@ -37,7 +37,7 @@ export default function Header() {
         "fixed top-0 left-0 right-0 z-[998] w-full",
     )}>
       <div className={cn(
-          "flex h-16 items-center justify-between px-24 transition-all duration-300 w-full",
+          "flex h-16 items-center justify-between px-6 lg:px-24 transition-all duration-300 w-full",
           isScrolled 
             ? "bg-primary shadow-lg border border-primary/20" 
             : "bg-primary shadow-lg border border-primary/20"
@@ -50,7 +50,7 @@ export default function Header() {
                     alt={logoImage.description}
                     width={120}
                     height={24}
-                    className="object-contain w-20 h-auto sm:w-28 sm:h-auto"
+                    className="object-contain w-[120px] h-auto sm:w-[150px] sm:h-auto"
                     priority
                 />
               ) : (
@@ -67,57 +67,53 @@ export default function Header() {
               </div>
               
               {/* Dropdown Menu */}
-              <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-3 w-80 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-[999]">
+              <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-3 w-max min-w-[320px] max-w-none bg-white rounded-xl shadow-xl shadow-primary/10 border border-slate-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-[999] overflow-hidden">
                 <div className="py-2">
                   {link.label === 'Serviços' && (
-                    <div className="py-1">
-                      <div className="px-3 py-2 text-xs font-semibold text-gray-500 border-b border-gray-100">Serviços</div>
-                      <Link href="#dp-terceirizado" className="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary whitespace-nowrap">
+                    <div className="py-2">
+                      <Link href="#dp-terceirizado" className="block w-full px-6 py-4 text-[15px] font-normal text-center text-primary hover:bg-slate-50 hover:text-orange-600 transition-colors whitespace-nowrap">
                         Terceirização DP
                       </Link>
-                      <Link href="#consultoria-trabalhista" className="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary whitespace-nowrap">
+                      <Link href="#consultoria-trabalhista" className="block w-full px-6 py-4 text-[15px] font-normal text-center text-primary hover:bg-slate-50 hover:text-orange-600 transition-colors whitespace-nowrap">
                         Consultoria Trabalhista
                       </Link>
-                      <Link href="#migracao-folha" className="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary whitespace-nowrap">
+                      <Link href="#migracao-folha" className="block w-full px-6 py-4 text-[15px] font-normal text-center text-primary hover:bg-slate-50 hover:text-orange-600 transition-colors whitespace-nowrap">
                         Migração de Sistemas de Folha
                       </Link>
-                      <Link href="#esocial" className="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary whitespace-nowrap">
+                      <Link href="#esocial" className="block w-full px-6 py-4 text-[15px] font-normal text-center text-primary hover:bg-slate-50 hover:text-orange-600 transition-colors whitespace-nowrap">
                         eSocial
                       </Link>
                     </div>
                   )}
                   
                   {link.label === 'Sobre' && (
-                    <div className="py-1">
-                      <div className="px-3 py-2 text-xs font-semibold text-gray-500 border-b border-gray-100">Sobre</div>
-                      <Link href="#sobre" className="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary whitespace-nowrap">
+                    <div className="py-2">
+                      <Link href="#sobre" className="block w-full px-6 py-4 text-[15px] font-normal text-center text-primary hover:bg-slate-50 hover:text-orange-600 transition-colors whitespace-nowrap">
                         Minha História
                       </Link>
-                      <Link href="#sobre" className="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary whitespace-nowrap">
+                      <Link href="#sobre" className="block w-full px-6 py-4 text-[15px] font-normal text-center text-primary hover:bg-slate-50 hover:text-orange-600 transition-colors whitespace-nowrap">
                         Diferenciais
                       </Link>
                     </div>
                   )}
                   
                   {link.label === 'Blog' && (
-                    <div className="py-1">
-                      <div className="px-3 py-2 text-xs font-semibold text-gray-500 border-b border-gray-100">Blog</div>
-                      <Link href="#blog" className="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary whitespace-nowrap">
+                    <div className="py-2">
+                      <Link href="#blog" className="block w-full px-6 py-4 text-[15px] font-normal text-center text-primary hover:bg-slate-50 hover:text-orange-600 transition-colors whitespace-nowrap">
                         Artigos
                       </Link>
-                      <Link href="#blog" className="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary whitespace-nowrap">
+                      <Link href="#blog" className="block w-full px-6 py-4 text-[15px] font-normal text-center text-primary hover:bg-slate-50 hover:text-orange-600 transition-colors whitespace-nowrap">
                         Categorias
                       </Link>
                     </div>
                   )}
                   
                   {link.label === 'Contato' && (
-                    <div className="py-1">
-                      <div className="px-3 py-2 text-xs font-semibold text-gray-500 border-b border-gray-100">Contato</div>
-                      <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary whitespace-nowrap">
+                    <div className="py-2">
+                      <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="block w-full px-6 py-4 text-[15px] font-normal text-center text-primary hover:bg-slate-50 hover:text-orange-600 transition-colors whitespace-nowrap">
                         WhatsApp
                       </a>
-                      <Link href="#contato" className="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary whitespace-nowrap">
+                      <Link href="#contato" className="block w-full px-6 py-4 text-[15px] font-normal text-center text-primary hover:bg-slate-50 hover:text-orange-600 transition-colors whitespace-nowrap">
                         Formulário
                       </Link>
                     </div>

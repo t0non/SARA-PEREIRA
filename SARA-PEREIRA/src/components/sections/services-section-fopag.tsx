@@ -95,7 +95,7 @@ const services = [
       "Workshops presenciais",
       "Material didático exclusivo"
     ],
-    image: "https://files.catbox.moe/rmb1iw.jpg"
+    image: "https://files.catbox.moe/dm27fz.jpg"
   },
   {
     id: 'pacotes-servicos',
@@ -108,7 +108,7 @@ const services = [
       "DP Estratégico Premium",
       "Serviços sob medida"
     ],
-    image: "https://files.catbox.moe/hvg4bq.jpg"
+    image: "https://files.catbox.moe/lrhw7n.jpeg"
   }
 ];
 
@@ -189,7 +189,7 @@ export default function ServicesSection() {
                     Falar com Sara
                   </a>
                 </Button>
-                <Button variant="outline" size="lg" className="border-white/30 text-white hover:bg-white/10 text-base px-8 py-3 rounded-full">
+                <Button size="lg" className="bg-white text-primary hover:bg-slate-50 text-base px-8 py-3 shadow-md rounded-full">
                   Solicitar Proposta
                 </Button>
               </div>
