@@ -1,0 +1,46 @@
+{
+  "placeholderImages": [
+    {
+      "id": "logo",
+      "description": "Logo da DP Estratégico",
+      "imageUrl": "https://files.catbox.moe/vspse3.png",
+      "imageHint": "company logo"
+    },
+    {
+      "id": "hero-sara",
+      "description": "Foto profissional da especialista Sara.",
+      "imageUrl": "https://files.catbox.moe/hvg4bq.jpg",
+      "imageHint": "professional woman"
+    },
+    {
+      "id": "about-sara",
+      "description": "Foto da especialista Sara em um contexto de trabalho, com um fundo de escritório.",
+      "imageUrl": "https://files.catbox.moe/rmb1iw.jpg",
+      "imageHint": "professional woman portrait"
+    },
+    {
+      "id": "problem-sara",
+      "description": "Foto de uma mulher com expressão de preocupação, representando os problemas de um DP não estratégico.",
+      "imageUrl": "https://files.catbox.moe/kazjlx.png",
+      "imageHint": "worried woman thinking"
+    },
+    {
+      "id": "why-outsource-image",
+      "description": "Imagem ilustrativa para a seção 'Por que terceirizar o DP?'",
+      "imageUrl": "https://files.catbox.moe/3qh8fz.png",
+      "imageHint": "graphic illustration"
+    },
+    {
+      "id": "quote-sara",
+      "description": "Foto da especialista Sara sorrindo.",
+      "imageUrl": "https://files.catbox.moe/espcgk.png",
+      "imageHint": "smiling professional woman"
+    },
+    {
+      "id": "cta-image",
+      "description": "Imagem de call to action com um computador e gráficos",
+      "imageUrl": "https://files.catbox.moe/s4bfzb.png",
+      "imageHint": "computer graphics"
+    }
+  ]
+}
