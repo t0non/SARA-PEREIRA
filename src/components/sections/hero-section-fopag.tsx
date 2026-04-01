@@ -1,0 +1,91 @@
+'use client';
+
+import Image from 'next/image';
+import { ArrowRight, CheckCircle, TrendingUp } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { FadeIn } from '@/components/ui/fade-in';
+import { Button } from '@/components/ui/button';
+import { WHATSAPP_LINK } from '@/lib/constants';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
+
+const stats = [
+  { number: "500+", label: "Empresas Atendidas" },
+  { number: "10+", label: "Anos de Experiência" },
+  { number: "99%", label: "Satisfação" },
+  { number: "24/7", label: "Suporte" }
+];
+
+export default function HeroSection() {
+  const heroImage = PlaceHolderImages.find(p => p.id === 'hero-sara');
+
+  return (
+    <section className="relative w-full bg-white overflow-hidden pt-28 pb-12 lg:pt-36 lg:pb-20">
+
+  
+  {/* 2. GARANTA QUE O SEU CONTAINER TEM O relative z-10 */}
+  <div className="relative z-10 w-full max-w-7xl mx-auto px-6 sm:px-8 lg:px-8 flex flex-col lg:flex-row items-center justify-between gap-12">
+    
+    {/* Metade Esquerda: Textos (Exatamente 50% do espaço) */}
+    <div className="w-full lg:w-1/2 flex flex-col justify-start">
+      <FadeIn direction="up" className="space-y-8">
+        <div className="space-y-6">
+          <div className="space-y-4">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-light tracking-tight text-foreground leading-tight">
+              Soluções em <span className="text-primary font-semibold">BPO</span><br />por <span className="text-primary font-semibold">Sara Pereira</span>
+            </h1>
+            <div className="max-w-2xl">
+              <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed">
+                Meu trabalho é pautado pela <strong>confiabilidade</strong>, <strong>processos transparentes</strong>, 
+                <strong>métricas objetivas</strong>, adoção de <strong>tecnologias de ponta</strong> e 
+                <strong>suporte contínuo</strong> e pessoal, tudo isso com o objetivo de 
+                <strong>impulsionar o seu negócio</strong> de forma consistente e eficiente.
+              </p>
+            </div>
+          </div>
+
+          {/* Botões */}
+          <div className="flex flex-col sm:flex-row gap-6 pt-6">
+            <Button asChild size="lg" className="bg-orange-500 text-white hover:bg-orange-600 text-base px-8 py-3 shadow-lg shadow-orange-500/30 rounded-full">
+              <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
+                Fale com a Sara
+                <ArrowRight className="w-4 h-4 ml-2" />
+              </a>
+            </Button>
+            <Button asChild variant="outline" size="lg" className="border-orange-400 text-orange-500 hover:bg-orange-50 hover:border-orange-500 hover:text-orange-600 text-base px-8 py-3 rounded-full">
+              <a href="#servicos">
+                Conhecer Serviços
+              </a>
+            </Button>
+          </div>
+        </div>
+      </FadeIn>
+    </div>
+
+    {/* Metade Direita: Imagem da Sara (Exatamente 50% do espaço) */}
+    <div className="w-full lg:w-1/2 flex justify-center lg:justify-end bg-white">
+      <div className="relative w-full h-[500px] lg:h-[600px] bg-white" style={{ background: 'white' }}>
+        <motion.div 
+          animate={{ y: [-10, 10, -10] }}
+          transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
+          className="relative w-full h-full bg-white"
+          style={{ background: 'white' }}
+        >
+          <div className="relative w-full h-full">
+            <img 
+              src="https://files.catbox.moe/jf6gav.png"
+              alt="Gêmeas DP - Profissionais de Departamento Pessoal"
+              className="w-full h-full object-contain outline-none ring-0 border-0 focus:outline-none focus:ring-0 relative z-10"
+              style={{ border: 'none', outline: 'none', boxShadow: 'none', background: 'white' }}
+            />
+          </div>
+        </motion.div>
+        {/* Gradientes estáticos fora da animação */}
+        <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-white via-white/95 to-transparent z-20" style={{bottom: '-10px'}} />
+        <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-white via-white/95 to-transparent z-30" style={{bottom: '-10px'}} />
+      </div>
+    </div>
+
+  </div>
+</section>
+  );
+}
